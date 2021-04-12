@@ -1,0 +1,432 @@
+@import "foundation/base";
+
+
+// base
+
+body {
+  font-family: 'Hiragino Mincho Pro',serif;
+  color: #fff;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+.sub-title {
+  text-align: center;
+  h2 {
+    font-size: 30px;
+    margin-bottom: 42px;
+  }
+  h3 {
+    font-size: 20px;
+    margin-bottom: 70px;
+  }
+}
+.section-wrapper {
+  background-color: #000000;
+  padding-top: 105px;
+}
+
+// ヘッダー
+.header {
+  width: 100%;
+  background-color: #4D0000;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  .header-logo {
+    margin: 12px 0 12px 30px;
+    img {
+      width: 188px;
+    }
+  }
+  .header-nav {
+    margin-left: auto;
+    .nav-list {
+      display: flex;
+      margin: 38px 33px 38px 0;
+      .nav-item {
+        font-size: 18px;
+        &:nth-child(n+2) {
+          margin-left: 25px;
+        }
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .burger-btn {
+    display: none;
+  }
+}
+
+// トップ
+.top {
+  background-image: url('../image/top-bg.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  top: 94px;
+  margin-bottom: 90px;
+  .top-title {
+    font-size: 50px;
+    padding: 270px 0;
+    p:nth-child(2) {
+      margin-top: 25px;
+    }
+  }
+}
+
+// 本館の特徴
+.feature {
+  .feature-item {
+    display: flex;
+    width: 100%;
+    .feature-image {
+      width: 50%;
+    }
+    .feature-text {
+      width: 50%;
+      .feature-subtitle {
+        font-size: 28px;
+        color: #FFFFDD;
+        margin: 40px 0 60px 40px;
+        p:nth-child(2) {
+          margin-top: 15px;
+        }
+      }
+      .feature-explanation {
+        margin: 0 40px 60px 40px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      .detail-btn {
+        text-align: center;
+        border-radius: 5px;
+        a {
+          display: inline-block;
+          color: #FFFFFF;
+          background-color: #B8860BEA;
+          font-size: 14px;
+          padding: 12px 22px;
+          border-radius: 5px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+// おすすめプラン
+.recommend {
+  // レコメンドプラン
+  .rec-plan-list {
+    display: flex;
+    justify-content: center;
+      .rec-plan-item {
+      background-color: #fff;
+      color: black;
+      border-radius: 8px;
+      margin: 0 25px 94px;
+      .rec-plan-text {
+        .rec-plan-heading {
+          margin: 23px 25px 66px;
+          font-weight: bold;
+        }
+        .rec-plan-price {
+          margin: 0 25px 20px;
+          span {
+            color: #FF0000;
+          }
+        }
+      }
+    }
+    .slick-arrow {
+      display: none!important;
+    }
+  }
+
+  // サービスリスト
+  .service-list {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    color: #000000;
+    .service-item {
+      background-color: #fff;
+      width: 33%;
+      height: 387px;
+      &:nth-child(n+2) {
+        margin-left: 20px;
+      }
+      .service-image {
+        width: 160px;
+        margin-top: 20px;
+      }
+      .service-heading {
+        font-size: 28px;
+        margin-bottom: 40px;
+      }
+      .service-explanation {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0 20px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+// ブログ
+.blog {
+  padding-bottom: 80px;
+  .blog-list {
+    width: 90%;
+    margin: auto;
+    .blog-record {
+      margin-bottom: 40px;
+      display: flex;
+      .blog-heading {
+        font-size: 14px;
+        width: 157px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        background-color: #4D0000;
+      }
+      .blog-data {
+        flex: 1;// ★「blog-list」から「blog-heading」を引いた横幅を１として、その範囲内を埋めるようになる。
+        font-size: 24px;
+        line-height: 1.5;
+        text-decoration: underline;
+        margin-left: 20px;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .more-btn {
+    text-align: center;
+    border-radius: 5px; 
+    margin-top: 60px;
+    a {
+        display: inline-block;
+        color: #FFFFFF;
+        background-color: #B8860BEA;
+        font-size: 14px;
+        padding: 12px 42px;
+        border-radius: 5px;
+      }
+  }
+}
+
+
+// よくある質問
+
+.faq {
+  padding-bottom: 100px;
+  .faq-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    .faq-container {
+      line-height: 1.5;
+      cursor: pointer;
+      .question {
+        background-color: #FFFFFF;
+        color: #000000;
+        padding: 20px 40px;
+        text-align: center;
+        border-bottom: 1px solid #E5E5E5;
+      }
+      .answer {
+        background-color: #F2F2F2;
+        color: #000000;
+        padding: 25px 42px 25px 50px;
+        border-bottom: 1px solid #E5E5E5;
+        display: none;
+      }
+      .open {
+        display: block;
+      }
+    }
+  }
+}
+
+// フッター
+
+.footer {
+  background-color: #4D0000;
+  padding: 62px 0 42px 0;
+  text-align: center;
+  .footer-nav-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+    .footer-nav-item:nth-child(n+2) {
+      margin-left: 40px;
+    }
+  }
+  .footer-logo {
+    width: 188px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+  }
+}
+
+// レスポンシブ
+
+@media screen and (max-width:767px) {
+  // ヘッダー
+  .header {
+    .header-nav {
+      display: none;
+      position: fixed;
+      top: 94px;
+      width: 100%;
+      background-color: #000000CC;
+      .nav-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0 20px 0;
+        .nav-item {
+          font-size: 26px;
+          margin-bottom: 30px;
+          &:nth-child(n+2) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    .burger-btn {
+      display: block;
+      position: absolute;
+      top: 32px;
+      right: 25px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+      appearance: none;
+      .bar {
+        display: block;
+        background-color: #fff;
+        height: 3px;
+        width: 50px;
+      }
+      .bar-top,
+      .bar-mid {
+        margin-bottom: 10px;
+        transition: .3s;
+      }
+      .bar-bottom {
+        transition: .3s;
+      }
+    }
+    .burger-btn.cross {
+      .bar-top {
+        /* tranlateで指定した方向に対して回転？*/
+        transform: rotate(45deg) translate(9.5px, 9.5px);
+        transition: .3s;
+      }
+      .bar-mid {
+        opacity: 0;
+        transition: .3s;
+      }
+      .bar-bottom {
+        transform: rotate(-45deg) translate(9.5px, -9.5px);
+        transition: .3s;
+      }
+    }
+  }
+
+  // トップ
+  .top {
+    .top-title {
+      font-size: 35px;
+    }
+  }
+
+  // 本館の特徴
+  .feature {
+    .feature-item {
+      display: block;
+      .feature-image {
+        width: 100%;
+      }
+      .feature-text {
+        width: 100%;
+        padding-bottom: 70px;
+      }
+    }
+  }
+
+  // おすすめプラン
+  .recommend {
+    // レコメンドプラン
+    .rec-plan-list {
+      display: block;
+    }
+
+    //  サービスリスト
+    .service-list {
+      display: block;
+      padding-bottom: 40px;
+      .service-item {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        &:nth-child(n+2) {
+          margin-left: none;
+        }
+      }
+    }
+  }
+
+  // ブログ
+  .blog {
+    .blog-list {
+      .blog-record {
+        .blog-heading {
+          width: 80px;
+          height: 30px;
+          line-height: 30px;
+        }
+        .blog-data {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  // よくある質問
+  .faq {
+    .faq-wrapper {
+      width: 85%;
+    }
+  }
+
+  // フッター
+  .footer {
+    .footer-nav-list {
+      display: block;
+      .footer-nav-item:nth-child(n+2) {
+        margin-left: 0;
+        margin-top: 30px;
+      }
+    }
+  }
+  
+}
