@@ -13,22 +13,24 @@ $('.burger-btn').click(function() {
 
 // Recommend Plan
 //========================//
-$('.slider').slick({
-  centerMode: true,
-  centerPadding: '36%',
-  autoplay: true,
-  autoplaySpeed: 5000,//1000ごとに1秒。
-  speed: 1000,
-
-  responsive: [
-    {
-      breakpoint: 767,
-      settings: {
-        centerMode: false,
-        centerPadding: false,
+$(function() {
+  $('.slider').slick({
+    centerMode: true,
+    centerPadding: '36%',
+    autoplay: true,
+    autoplaySpeed: 5000,//1000ごとに1秒。
+    speed: 1000,
+  
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          centerMode: false,
+          centerPadding: false,
+        }
       }
-    }
-  ]
+    ]
+  });
 });
 
 // FAQ
