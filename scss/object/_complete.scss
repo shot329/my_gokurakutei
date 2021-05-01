@@ -1,0 +1,27 @@
+.complete {
+  background-color: cl(black);
+  color: cl(white);
+  p {
+    margin: 0 auto;
+    padding: 50px 0;
+    font-size: 18px;
+    width: 80%;
+    line-height: 1.6;
+    @include overTab {
+      font-size: 20px;
+      width: 40%;
+    }
+  }
+  a {
+    color: cl(white);
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    text-decoration: underline;
+    text-align: center;
+    width: 50%;
+    @include overTab {
+      width: 10%;
+    }
+  }
+}

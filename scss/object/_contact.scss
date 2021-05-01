@@ -1,0 +1,44 @@
+.contact {
+  padding-bottom: 100px;
+  .form-wrapper {
+    margin: 0 auto;
+    width: 80%;
+    box-sizing: border-box;
+    @include overTab {
+      max-width: 700px;
+    }
+    .form-item {
+      margin-bottom: 20px;
+      dt {
+        margin-bottom: 10px;
+      }
+      dd {
+        input,textarea {
+          padding: 15px 0 15px 20px;
+          display: block;
+          width: 100%;
+          box-sizing: border-box;// ★
+          background-color: cl(black);
+          border: 1px solid cl(white);
+        }
+      }
+    }
+    .privacy {
+      text-align: center;
+      p {
+        margin-top: 50px;
+      }
+      div {
+        margin-top: 30px;
+      }
+    }
+    button {
+      display: block;
+      padding: 12px 56px;
+      margin: 50px auto 0;
+      border-radius: 5px;
+      color: cl(white);
+      background-color: cl(gold);
+    }
+  }
+}

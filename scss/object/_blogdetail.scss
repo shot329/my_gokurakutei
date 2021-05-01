@@ -1,0 +1,96 @@
+.blog-detail {
+  padding-bottom: 100px;
+  .article-container {
+    width: 80%;
+    margin: 0 auto;
+    @include overTab {
+      display: flex;
+      justify-content: space-between;
+    }
+    .blog-article {
+      @include overTab {
+        width: 70%;
+      }
+      .news {
+        font-size: 14px;
+        width: 157px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        background-color: cl(primary);
+        margin-bottom: 44px;
+      }
+      .title {
+        font-size: 36px;
+        margin-bottom: 45px;
+      }
+      .information {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        .tweet {
+          font-size: 20px;
+          background-color: cl(lightblue);
+          padding: 10px 12px;
+        }
+        .date {
+          font-size: 24px;
+        }
+      }
+      .image {
+        margin-bottom: 42px;
+      }
+      .text-wrapper {
+        .text {
+          margin: 37px 0 45px 0;
+          .heading2 {
+            font-size: 36px;
+            background-color: cl(darkblue);
+            padding: 13px 0 13px 22px;
+          }
+          p {
+            font-size: 24px;
+            &:nth-child(n+2) {
+              margin-top: 20px;
+            }
+          }
+          .heading3 {
+            font-size: 26px;
+            padding: 10px 0 10px 21px;
+            border-left: 8px solid cl(darkblue);
+          }
+        }
+      }
+    }
+    .sub-article {
+      margin-top: 100px;
+      @include overTab {
+        margin-top: 200px;
+        width: 25%;
+      }
+      .heading {
+        font-size: 21px;
+        padding: 23px 0 13px;
+        background-color: cl(darkblue);
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .article-list {
+        .article-item {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          img {
+            width: 30%;
+          }
+          h6 {
+            width: 65%;
+            font-size: 12px;
+            line-height: 2;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

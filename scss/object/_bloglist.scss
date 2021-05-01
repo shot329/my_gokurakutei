@@ -1,0 +1,66 @@
+.article {
+  color:  cl(white);
+  .article-list {
+    width: 80%;
+    margin: 0 auto;
+    .article-item {
+      margin-bottom: 50px;
+      @include overTab {
+        display: flex;
+        justify-content: space-between;
+      }
+      .article-image {
+        position: relative;
+        @include overTab {
+          width: 25%;
+        }
+        img {
+          width: 100%;
+        }
+        p {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: cl(primary);
+          font-size: 14px;
+          padding: 9px 30px;
+        }
+      }
+      .article-text {
+        margin-top: 30px;
+        @include overTab {
+          margin-top: 0;
+          width: 70%;
+        }
+        .title {
+          margin-top: 15px;
+          font-size: 28px;
+          a {
+            color: cl(white);
+          }
+        }
+        .text {
+          margin-top: 20px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .pager {
+    margin: 0 auto;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    @include overTab {
+      width: 20%;
+    }
+    .pager-init {
+      padding: 11px 15px;
+      border: 1px solid cl(gold);
+      &:first-child {
+        background-color: cl(gold);
+      }
+    }
+  }
+}

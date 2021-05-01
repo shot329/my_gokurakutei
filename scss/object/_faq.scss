@@ -1,0 +1,31 @@
+.faq {
+  padding-bottom: 100px;
+  .faq-wrapper {
+    margin: 0 auto;
+    width: 85%;
+    @include overTab {
+      width: 70%;
+    }
+    .faq-container {
+      line-height: 1.5;
+      cursor: pointer;
+      .question {
+        background-color: cl(white);
+        color: cl(black);
+        padding: 20px 40px;
+        text-align: center;
+        border-bottom: 1px solid #E5E5E5;
+      }
+      .answer {
+        background-color: #F2F2F2;
+        color: #000000;
+        padding: 25px 42px 25px 50px;
+        border-bottom: 1px solid #E5E5E5;
+        display: none;
+      }
+      .open {
+        display: block;
+      }
+    }
+  }
+}

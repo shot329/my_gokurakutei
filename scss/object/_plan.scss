@@ -1,0 +1,70 @@
+.recommend {
+  .rec-plan-list {
+    @include overTab {
+      display: flex;
+      justify-content: center;
+    }
+      .rec-plan-item {
+      background-color: cl(white);
+      color: cl(black);
+      border-radius: 8px;
+      margin: 0 25px 94px;
+      .rec-plan-text {
+        .rec-plan-heading {
+          margin: 23px 25px 66px;
+          font-weight: bold;
+        }
+        .rec-plan-price {
+          margin: 0 25px 20px;
+          span {
+            color: cl(red);
+          }
+        }
+      }
+    }
+    .slick-arrow {
+      display: none!important;
+    }
+  }
+  .service-list {
+    padding-bottom: 40px;
+    @include overTab {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 0px;
+    }
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    color: cl(black);
+    .service-item {
+      background-color: cl(white);
+      height: 387px;
+      width: 90%;
+      margin: 0 auto 40px;
+      @include overTab {
+        width: 33%;
+      }
+      &:nth-child(n+2) {
+        margin-left: none;
+        @include overTab {
+          margin-left: 20px;
+        }
+      }
+      .service-image {
+        width: 160px;
+        margin-top: 20px;
+      }
+      .service-heading {
+        font-size: 28px;
+        margin-bottom: 40px;
+      }
+      .service-explanation {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0 20px;
+        text-align: left;
+      }
+    }
+  }
+}

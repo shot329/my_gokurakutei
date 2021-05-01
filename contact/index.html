@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>極楽亭｜お問い合わせ</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../scss/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <h1 class="header-logo">
+          <a href="../index.html">
+            <img src="../image/logo.png" alt="">
+          </a>
+        </h1>
+        <div class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">宿泊予約</a></li>
+                <li class="nav-item"><a href="#">観光情報</a></li>
+                <li class="nav-item"><a href="../blog/index.html">ブログ</a></li>
+                <li class="nav-item"><a href="#">お問い合わせ</a></li>
+            </ul>
+        </div>
+        <button class="burger-btn">
+            <span class="bar bar-top"></span>
+            <span class="bar bar-mid"></span>
+            <span class="bar bar-bottom"></span>
+        </button>
+    </header>
+
+    <div class="sub-top"></div>
+
+    <!-- パンくずリスト -->
+    <div class="pankuzu">
+      <a href="../index.html">ホーム</a>
+      <span> > </span>
+      <p>お問い合わせ</p>
+    </div>
+
+    <!-- お問い合わせフォーム -->
+    <section class="contact section-sub-wrapper">
+      <div class="cmn-title">
+        <h2>お問い合わせ</h2>
+        <h3>Contact</h3>
+      </div>
+      <div class="form-wrapper">
+        <form action="/contact/complete/index.html">
+          <dl>
+            <div class="form-item">
+              <dt><label for="">会社名</label></dt>
+              <dd><input type="text" placeholder="株式会社 京の極楽"></dd>
+            </div>
+            <div class="form-item">
+              <dt><label for="">氏名</label></dt>
+              <dd><input type="text" placeholder="山田 太郎"></dd>
+            </div>
+            <div class="form-item">
+              <dt><label for="">メールアドレス</label></dt>
+              <dd><input type="text" placeholder="example@examle.com"></dd>
+            </div>
+            <div class="form-item">
+              <dt><label for="">電話番号</label></dt>
+              <dd><input type="text" placeholder="000-1234-5678"></dd>
+            </div>
+            <div class="form-item">
+              <dt><label for="">お問い合わせ内容</label></dt>
+              <dd><textarea name="" id="" cols="30" rows="10" placeholder="お問い合わせ内容を入力してください"></textarea></dd>
+            </div>
+          </dl>
+          <div class="form-item privacy">
+            <p><a>プライバシーポリシー</a>に同意の上、送信ください。</p>
+            <div>
+              <input type="checkbox">
+              <label for="">プライバシーポリシーに同意する</label>
+            </div>
+          </div>
+          <button type="submit">送信する</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="inner wow animate__animated animate__fadeIn" data-wow-offset="10">
+            <div class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">利用規約</li>
+                    <li class="footer-nav-item">プライバシーポリシー</li>
+                    <li class="footer-nav-item">個人商取引法に基づく表記</li>
+                    <li class="footer-nav-item">お問い合わせ</li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <img src="../image/logo.png" alt="">
+            </div>
+            <div class="copy-write">Copyright (c) 2021 極楽亭 All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
