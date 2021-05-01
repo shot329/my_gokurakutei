@@ -1,0 +1,50 @@
+.feature {
+  .feature-item {
+    @include overTab {
+      display: flex;
+      width: 100%;
+    }
+    .feature-image {
+      width: 100%;
+      @include overTab {
+        width: 50%;
+      }
+    }
+    .feature-text {
+      width: 100%;
+      padding-bottom: 70px; 
+      @include overTab {
+        width: 50%;
+        padding-bottom: 0;
+      }
+      .feature-subtitle {
+        font-size: 28px;
+        color: cl(baige);
+        margin: 40px 0 60px 40px;
+        p:nth-child(2) {
+          margin-top: 15px;
+        }
+      }
+      .feature-explanation {
+        margin: 0 40px 60px 40px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      .detail-btn {
+        text-align: center;
+        border-radius: 5px;
+        a {
+          display: inline-block;
+          color: cl(white);
+          background-color: cl(gold);
+          font-size: 14px;
+          padding: 12px 22px;
+          border-radius: 5px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+  }
+}

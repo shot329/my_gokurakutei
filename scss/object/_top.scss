@@ -1,0 +1,19 @@
+.top {
+  background-image: url('../image/top-bg.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  top: 94px;
+  margin-bottom: 90px;
+  .top-title {
+    font-size: 35px;
+    @include overTab {
+      font-size: 50px;
+    }
+    padding: 270px 0;
+    p:nth-child(2) {
+      margin-top: 25px;
+    }
+  }
+}

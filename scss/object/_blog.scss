@@ -1,0 +1,50 @@
+.blog {
+  padding-bottom: 80px;
+  .blog-list {
+    width: 90%;
+    margin: auto;
+    .blog-record {
+      margin-bottom: 40px;
+      display: flex;
+      .blog-heading {
+        font-size: 14px;
+        text-align: center;
+        background-color: cl(primary);
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        @include overTab {
+          width: 157px;
+          height: 36px;
+          line-height: 36px;
+        }
+      }
+      .blog-data {
+        flex: 1;// ★「blog-list」から「blog-heading」を引いた横幅を１として、その範囲内を埋めるようになる。
+        line-height: 1.5;
+        text-decoration: underline;
+        margin-left: 20px;
+        font-size: 16px;
+        @include overTab {
+          font-size: 24px;
+        }
+        a {
+          color: cl(white);
+        }
+      }
+    }
+  }
+  .more-btn {
+    text-align: center;
+    border-radius: 5px; 
+    margin-top: 60px;
+    a {
+        display: inline-block;
+        color: cl(white);
+        background-color: cl(gold);
+        font-size: 14px;
+        padding: 12px 42px;
+        border-radius: 5px;
+      }
+  }
+}

@@ -1,25 +1,18 @@
-// $(".top-title").css('color', 'blue');
+// Animation
+//========================//
+$(function() {
+  new WOW().init();
+});
 
-// ヘッダー（ハンバーガメニュー）
+// Nav
+//========================//
 $('.burger-btn').click(function() {
   $('.header-nav').fadeToggle(300);
   $(this).toggleClass('cross');
 });
 
-
-// よくある質問（アコーディオン）
-$(function() {
-  $('.question').click(function() {
-    $answer = $(this).next('.answer');
-  
-    // ↓順番違うと問題が起きる。
-    $answer.slideToggle(400);
-    $answer.toggleClass('open');
-  });
-});
-
-
-// スライダー
+// Recommend Plan
+//========================//
 $('.slider').slick({
   centerMode: true,
   centerPadding: '36%',
@@ -38,5 +31,14 @@ $('.slider').slick({
   ]
 });
 
-// wow.jsの発火宣言
-new WOW().init();
+// FAQ
+//========================//
+$(function() {
+  $('.question').click(function() {
+    $answer = $(this).next('.answer');
+
+    // ↓順番違うと問題が起きる。
+    $answer.slideToggle(400);
+    $answer.toggleClass('open');
+  });
+});

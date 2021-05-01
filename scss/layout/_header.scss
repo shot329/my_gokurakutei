@@ -1,0 +1,98 @@
+.header {
+  width: 100%;
+  background-color: cl(primary);
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  .header-logo {
+    margin: 12px 0 12px 30px;
+    img {
+      width: 188px;
+    }
+  }
+  .header-nav {
+    display: none;
+    position: fixed;
+    top: 94px;
+    width: 100%;
+    background-color: #000000CC;
+    @include overTab {
+      display: block;
+      position: static;
+      width:initial;
+      background-color: transparent;
+      margin-left: auto;
+    }
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0 20px 0;
+      @include overTab {
+        flex-direction: initial;
+        margin: 38px 33px 0 0;
+      }
+      .nav-item {
+        font-size: 26px;
+        margin-bottom: 30px;
+        @include overTab {
+          font-size: 18px;
+        }
+        &:nth-child(n+2) {
+          margin-left: 0;
+          @include overTab {
+            margin-left: 25px;
+          }
+        }
+        a {
+            color: #fff;
+        }
+      }
+    }
+  }
+  .burger-btn {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    @include overTab {
+      display: none;
+    }
+    .bar {
+      display: block;
+      background-color: cl(white);
+      height: 3px;
+      width: 50px;
+    }
+    .bar-top,
+    .bar-mid {
+      margin-bottom: 10px;
+      transition: .3s;
+    }
+    .bar-bottom {
+      transition: .3s;
+    }
+  }
+  .burger-btn.cross {
+    .bar-top {
+      /* tranlateで指定した方向に対して回転？*/
+      transform: rotate(45deg) translate(9.5px, 9.5px);
+      transition: .3s;
+    }
+    .bar-mid {
+      opacity: 0;
+      transition: .3s;
+    }
+    .bar-bottom {
+      transform: rotate(-45deg) translate(9.5px, -9.5px);
+      transition: .3s;
+    }
+  }
+}
